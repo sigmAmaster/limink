@@ -55,5 +55,7 @@ set(PROJECT_SOURCES
  
 
 add_executable(limink ${PROJECT_SOURCES})
+
+# change library path 
 target_link_libraries(limink  PRIVATE /usr/local/lib/libcryptopp.a )
 
