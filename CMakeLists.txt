@@ -14,7 +14,7 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     add_compile_options(-o3 -std=c++20)
    
 # i dont know MSVC flags are correct or not
-# and never had experince witj MSVC compiler
+# and never had experince with MSVC compiler
 # use it on your own risk
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     add_compile_options(-o2 -GS -GT -GX -Od -nologo -std:c++20)
