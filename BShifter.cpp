@@ -11,7 +11,9 @@
 #include <memory>
 #include <random>
 #include <string>
-#include <system_error>
+#include <system_error>static 
+
+static string msg;
 
 using namespace CryptoPP;
 using namespace std;
@@ -20,10 +22,7 @@ void BShifter::lock() {
 
   auto Shifter = [this](size_t loop) {
     SecByteBlock tmp(1);
-    std::random_device dev;
-    std::mt19937 mt(dev());
-    std::uniform_int_distribution<uint16_t> rand(1, loop);
-
+   
     for (size_t c1 = 0, c2 = (this->size() - 1); c1 < loop; c2--, c1++) {
 
       try {
@@ -60,7 +59,7 @@ void BShifter::lock() {
 
   } catch (const char *massage) {
 
-    string msg("ID B2 what:\n  ");
+    msg= "ID B2 what:\n  ";
     msg += massage;
 
     throw msg.c_str();
