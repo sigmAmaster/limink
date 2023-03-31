@@ -42,7 +42,7 @@
 //  key row size
 #define KRS 32
 
-/// create chain of keys for N100 alghorithm
+
 class SSK32 {
 
 public:
