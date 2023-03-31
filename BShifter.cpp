@@ -117,34 +117,7 @@ void BShifter::operator+=(CryptoPP::byte BYTE) {
   else
     throw "ID B5";
 };
-/*
-void BShifter::operator<<(CryptoPP::SecByteBlock &arr) {
 
-  if (arr.size() >= this->size())
-    for (auto i1 = this->begin(), i2 = arr.begin(); i1 != this->end();
-         i1++, i2++)
-      *i2 = *i1;
-  else
-    throw "ID B6";
-};
-*/
-CryptoPP::byte BShifter::operator[](size_t num) {
-
-  if (num < this->size())
-    return *(this->BytePtr() + num);
-
-  else
-    throw "ID B7";
-};
-/*
-void BShifter::operator>>(BShifter &data) {
-  this->Append(data, internalCounter);
-}
-
-void BShifter::operator>>(SecByteBlock &data) {
-  this->Append(data, internalCounter);
-}
-*/
 
 void BShifter::operator+=(std::string &data) {
 
