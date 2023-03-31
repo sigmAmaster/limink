@@ -1,5 +1,4 @@
 #include "SSKmanager_KRS32.hpp"
-#include "debuger.hpp"
 #include <cryptopp/secblockfwd.h>
 #include <cstdint>
 #include <iostream>
@@ -18,13 +17,6 @@ void SSK32::Krow(SecByteBlock &buff) {
 
     Row.Restart();
 
-#if Debuge2
-    printHexValue("Col ", &columnChain, columnChain.size());
-
-    std::cout << "internalCounter: " << internalCounter << std::endl;
-
-    printHexValue("Row ", &buff, buff.size());
-#endif
 
   }
 
@@ -38,13 +30,6 @@ void SSK32::Krow(SecByteBlock &buff) {
 
     Row.Restart();
 
-#if Debuge2
-    printHexValue("Col ", &columnChain, columnChain.size());
-
-    std::cout << "internalCounter: " << internalCounter << std::endl;
-
-    printHexValue("Row ", &buff, buff.size());
-#endif
   }
 
   internalCounter++;
